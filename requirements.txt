@@ -1,0 +1,9 @@
+requests>=2.31.0
+pytz>=2023.3
+flask>=3.0.0
+flask-cors>=4.0.0
+python-dotenv>=1.0.0
+
+# 可选依赖
+# not needed for basic monitoring:
+# notion-client (if using Notion integration separately)

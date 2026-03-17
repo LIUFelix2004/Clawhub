@@ -1,0 +1,18 @@
+{
+  "alerts": [
+    {
+      "timestamp": "2026-03-16T19:10:01.907702+08:00",
+      "chain": "bsc",
+      "token_address": "0xe6df05ce8c8301223373cf5b969afcb1498c5528",
+      "symbol": "QUQ",
+      "alert_type": "volume_surge",
+      "volume_change": 1.102,
+      "previous_volume": 5000,
+      "current_volume": 10510,
+      "message": "BSC链代币QUQ (0xe6df05...c5528) 交易量激增110.2% (5,000 → 10,510 USD)"
+    }
+  ],
+  "last_alert_time": "2026-03-16T19:10:01.907702+08:00",
+  "total_alerts": 1,
+  "alert_cooldown_minutes": 30
+}

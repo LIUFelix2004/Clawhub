@@ -1,0 +1,23 @@
+{
+  "volume_history": {
+    "bsc_0xe6df05ce8c8301223373cf5b969afcb1498c5528": [
+      {
+        "timestamp": "2026-03-16T18:42:59.755952+08:00",
+        "volume_5m": 77175.80157622622
+      },
+      {
+        "timestamp": "2026-03-16T19:10:01.907702+08:00",
+        "volume_5m": 48707.560278959994
+      }
+    ],
+    "eth_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": [
+      {
+        "timestamp": "2026-03-16T18:42:59.755952+08:00",
+        "volume_5m": 1250000.50
+      }
+    ]
+  },
+  "last_update": "2026-03-16T19:10:01.907702+08:00",
+  "monitored_chains": ["bsc", "ethereum"],
+  "total_tokens": 263
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClawAlert - 多链代币监控面板</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bell"></i> ClawAlert 多链代币监控系统</h1>
+            <p class="subtitle">实时监控 BSC、Ethereum、Solana、Base 四条链的代币交易活动</p>
+        </header>
+
+        <div class="dashboard">
+            <!-- 状态概览 -->
+            <div class="status-overview">
+                <div class="status-card">
+                    <h3><i class="fas fa-globe"></i> 监控状态</h3>
+                    <div class="status-indicator">
+                        <span class="status-dot active"></span>
+                        <span class="status-text">运行中</span>
+                    </div>
+                    <p class="status-time">最后更新: <span id="last-update">正在加载...</span></p>
+                </div>
+                
+                <div class="status-card">
+                    <h3><i class="fas fa-coins"></i> 监控代币</h3>
+                    <div class="status-value" id="total-tokens">0</div>
+                    <p>四条链总监控代币数</p>
+                </div>
+                
+                <div class="status-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 今日警报</h3>
+                    <div class="status-value alert" id="today-alerts">0</div>
+                    <p>交易量激增 & 大额交易</p>
+                </div>
+                
+                <div class="status-card">
+                    <h3><i class="fas fa-chart-line"></i> 活跃链</h3>
+                    <div class="chains-list">
+                        <span class="chain-tag bsc">BSC</span>
+                        <span class="chain-tag eth">Ethereum</span>
+                        <span class="chain-tag sol">Solana</span>
+                        <span class="chain-tag base">Base</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 链数据图表 -->
+            <div class="chart-container">
+                <h2><i class="fas fa-chart-bar"></i> 各链监控数据</h2>
+                <canvas id="chainChart"></canvas>
+            </div>
+
+            <!-- 实时警报 -->
+            <div class="alerts-container">
+                <h2><i class="fas fa-bell"></i> 实时警报</h2>
+                <div class="alerts-list" id="alerts-list">
+                    <div class="alert-item loading">
+                        <i class="fas fa-spinner fa-spin"></i> 正在加载警报数据...
+                    </div>
+                </div>
+            </div>
+
+            <!-- 监控代币列表 -->
+            <div class="tokens-container">
+                <h2><i class="fas fa-list"></i> 监控代币列表</h2>
+                <div class="tokens-table-container">
+                    <table class="tokens-table">
+                        <thead>
+                            <tr>
+                                <th>代币</th>
+                                <th>链</th>
+                                <th>市值</th>
+                                <th>价格</th>
+                                <th>30分钟交易量</th>
+                                <th>变化率</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tokens-body">
+                            <tr><td colspan="7" class="loading-cell"><i class="fas fa-spinner fa-spin"></i> 正在加载代币数据...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>ClawAlert v1.0 &copy; 2026 - 多链代币智能监控系统</p>
+            <p class="footer-links">
+                <a href="/api/status" target="_blank">API状态</a> | 
+                <a href="/api/tokens" target="_blank">代币数据</a> | 
+                <a href="/api/alerts" target="_blank">警报记录</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
