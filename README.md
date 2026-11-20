@@ -206,3 +206,13 @@ Notion同步 ←──── 数据聚合 ←──── Web面板展示
 ---
 
 **免责声明**：本项目仅为技术工具，不构成投资建议。加密货币交易存在高风险，请谨慎决策。
+
+<!-- felix-ai-shop:start -->
+
+---
+
+### 🛒 Felix AI 工具小铺
+
+各种低价 AI 工具，稳定直供 → **[felixaitools.shop/](https://felixaitools.shop/)**
+
+<!-- felix-ai-shop:end -->
